@@ -93,8 +93,8 @@
   position:fixed;
   background-color: #ffffff;
   color: #080E38;
+  margin-top: 53px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  margin-top: 30px;
   width: 100%;
   z-index: 1;
   left: 0px;

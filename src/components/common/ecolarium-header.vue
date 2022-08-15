@@ -46,11 +46,27 @@
     <div class="dropdown-home">Home
   
   </div>
-  <div class="dropdown-Company">Company
-    <i class="eci chevron-down"></i>
+  <div class="dropdown-Company">
+    <div class="company">
+      <p>Company</p>
+      <i class="eci chevron-down"></i>
+    </div>
+    
+     <div class="dropdown-company-conteiner">
+   <EcolariumHeaderCompanyDropdown  ></EcolariumHeaderCompanyDropdown> 
+   </div>
   </div>
-  <div class="dropdown-Sector">Sector
-    <i class="eci chevron-down"></i>
+  <div class="dropdown-Sector">
+    <div class="sector">
+      <p>Sector</p>
+      <i class="eci chevron-down"></i>
+    </div>
+    <div class="dropdown-sector-conteiner">
+<EcolariumHeaderSectorDropdown/>
+    </div>
+   
+    
+    
   </div>
   <div class="dropdown-investor">
     <div class="invester">
@@ -86,11 +102,11 @@
 
 <script setup>
 import EcolariumHeaderInvestorDropdown from "./ecolarium-header-investor-dropdown.vue";
+import EcolariumHeaderCompanyDropdown from "./ecolarium-header-company-dropdown.vue";
+import EcolariumHeaderSectorDropdown from "./ecolarium-header-sector-dropdown.vue";
 </script>
 
 <style>
-
-
 
 .eco-header{
  position: absolute;
@@ -305,9 +321,19 @@ color: #f9f9f9;
   }
  .dropdown-Company{
   display: flex;
+  color: white;
+font-size: 16px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
 }
 .dropdown-Sector{
   display: flex;
+  color: white;
+font-size: 16px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
 }
   
  .dropdown-investor{
@@ -365,13 +391,29 @@ text-align: center;
 
  }
 
+.company{
+  border-bottom: 1px solid white;
+  display: flex;
+  height: 20px;
 
+}
+.sector{
+   border-bottom: 1px solid white;
+  display: flex;
+  height: 20px;
+}
 .invester  {
   border-bottom: 1px solid white;
   display: flex;
   height: 20px;
 }
 .dropdown-investor:hover .dropdown-content-investor {
+  display: block;
+}
+.dropdown-Company:hover .dropdown-content-investor {
+  display: block;
+}
+.dropdown-Sector:hover .dropdown-content-investor {
   display: block;
 }
 </style>
