@@ -68,8 +68,7 @@
   </div>
   </div>  
    
- 
-   <div>Deneme</div>
+
   
  
   
