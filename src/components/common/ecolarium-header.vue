@@ -53,7 +53,7 @@
     </div>
     
      <div class="dropdown-company-conteiner">
-   <EcolariumHeaderCompanyDropdown  ></EcolariumHeaderCompanyDropdown> 
+   <EcolariumHeaderCompanyDropdown  :data2="companyourarray" :data3="companyforarray"/>
    </div>
   </div>
   <div class="dropdown-Sector">
@@ -104,6 +104,44 @@
 import EcolariumHeaderInvestorDropdown from "./ecolarium-header-investor-dropdown.vue";
 import EcolariumHeaderCompanyDropdown from "./ecolarium-header-company-dropdown.vue";
 import EcolariumHeaderSectorDropdown from "./ecolarium-header-sector-dropdown.vue";
+const companyourarray= [
+{
+  "title" : "deneme1",
+  "subtitle" : "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
+  "icon" : "eci home-check"
+},
+{
+  "title" : "deneme2",
+  "subtitle" : "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
+  "icon" : "eci home-check"
+},
+{
+  "title" : "deneme3",
+  "subtitle" : "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
+  "icon" : "eci home-check"
+},
+{
+  "title" : "deneme3",
+  "subtitle" : "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
+  "icon" : "eci home-check"
+},
+{
+  "title" : "deneme3",
+  "subtitle" : "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
+  "icon" : "eci home-check"
+},
+{
+  "title" : "deneme3",
+  "subtitle" : "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
+  "icon" : "eci home-check"
+}]
+const companyforarray =[
+  {
+  "title" : "deneme2",
+  "subtitle" : "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
+  "icon" : "eci home-check"
+  }
+]
 </script>
 
 <style>
@@ -407,6 +445,8 @@ text-align: center;
   display: flex;
   height: 20px;
 }
+
+
 .dropdown-investor:hover .dropdown-content-investor {
   display: block;
 }
