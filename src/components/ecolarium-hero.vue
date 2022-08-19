@@ -27,7 +27,7 @@
           <p>Scroll down</p>
         </div>
       </div>
-</div>
+    </div>
 
     <div class="completed-ongoing-investment">
       <div class="completed-button">
@@ -40,86 +40,84 @@
           <p>Ongoing Investment</p>
         </div>
       </div>
-      
     </div>
     <div class="card">
-      <EcolariumInvestmentCard  v-for="(item, index) in cardsarray" :key="index" :data="item"></EcolariumInvestmentCard>
+      <EcolariumInvestmentCard
+        v-for="(item, index) in cardsarray"
+        :key="index"
+        :data="item"
+      ></EcolariumInvestmentCard>
     </div>
-  
   </div>
 </template>
 
 <script setup>
 import EcolariumInvestmentCard from "./ecolarium-investment-card.vue";
-const cardsarray=[{
-  'image':'solar-panel-1.png',
-  'button': 'Renewable Energy',
-  'title':'Solar Panel Maintance',
-  'subtitle': 'Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim. '
-  
- },
- {
-   'image':'solar-panel-2.png',
-   'button': 'Industrial Area',
-  'title':'Solar panel station',
-  'subtitle': 'Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit'
-  
-
- },
- {
-   'image':'solar-panel-3.png',
-   'button': 'Renewable Energy',
-  'title':'Solar panel Maintance',
-  'subtitle':'Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt cillum minim'
- 
-
- },
- {
-  'image':'solar-panel-4.png',
-  'button': 'Renewable Energy',
-  'title':'Solar Panel Maintance',
-  'subtitle': 'Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim. '
- },
- {
-   'image':'solar-panel-5.png',
-   'button': 'Industrial Area',
-  'title':'Solar panel station',
-  'subtitle': 'Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit'
-  
-
- },
- {
-   'image':'solar-panel-6.png',
-   'button': 'Renewable Energy',
-  'title':'Solar panel Maintance',
-  'subtitle':'Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt cillum minim'
-  
-
- },
- {
-  'image':'solar-panel-7.png',
-   'button': 'Renewable Energy',
-  'title':'Solar Panel Maintance',
-  'subtitle': 'Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim. '
-  
- },
- {
-   'image':'solar-panel-8.png',
-   'button': 'Industrial Area',
-  'title':'Solar panel station',
-  'subtitle': 'Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit'
- 
-
- },
- {
-  'image':'solar-panel-9.png',
-  'button': 'Renewable Energy',
-  'title':'Solar panel Maintance',
-  'subtitle':'Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt cillum minim'
-
- }
- 
- ]
+const cardsarray = [
+  {
+    image: "solar-panel-1.png",
+    button: "Renewable Energy",
+    title: "Solar Panel Maintance",
+    subtitle:
+      "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim. ",
+  },
+  {
+    image: "solar-panel-2.png",
+    button: "Industrial Area",
+    title: "Solar panel station",
+    subtitle:
+      "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit",
+  },
+  {
+    image: "solar-panel-3.png",
+    button: "Renewable Energy",
+    title: "Solar panel Maintance",
+    subtitle:
+      "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt cillum minim",
+  },
+  {
+    image: "solar-panel-4.png",
+    button: "Renewable Energy",
+    title: "Solar Panel Maintance",
+    subtitle:
+      "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim. ",
+  },
+  {
+    image: "solar-panel-5.png",
+    button: "Industrial Area",
+    title: "Solar panel station",
+    subtitle:
+      "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit",
+  },
+  {
+    image: "solar-panel-6.png",
+    button: "Renewable Energy",
+    title: "Solar panel Maintance",
+    subtitle:
+      "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt cillum minim",
+  },
+  {
+    image: "solar-panel-7.png",
+    button: "Renewable Energy",
+    title: "Solar Panel Maintance",
+    subtitle:
+      "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim. ",
+  },
+  {
+    image: "solar-panel-8.png",
+    button: "Industrial Area",
+    title: "Solar panel station",
+    subtitle:
+      "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit",
+  },
+  {
+    image: "solar-panel-9.png",
+    button: "Renewable Energy",
+    title: "Solar panel Maintance",
+    subtitle:
+      "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt cillum minim",
+  },
+];
 </script>
 
 <style>
@@ -180,7 +178,6 @@ const cardsarray=[{
 
 .completed-ongoing-investment {
   display: flex;
-  position: absolute;
   background: #f1f2f6;
   height: 56px;
   width: 359px;
@@ -220,11 +217,9 @@ const cardsarray=[{
   padding-left: 26px;
   color: #9c9faf;
 }
-.card{
+.card {
   margin-left: 148px;
-  margin-top: 202px;
-  
+  margin-top: 34px;
+  margin-bottom: 88px;
 }
-
-
 </style>

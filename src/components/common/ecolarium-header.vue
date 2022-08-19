@@ -1,168 +1,157 @@
 <template>
-<div class="eco-header">
-  <div class="üst-navigation-bar">
-    <div class="üst-bar">
-      <div class="başlık">ecolarium</div>
-      <div class="contact">
-        <div class="phone">
-          <div class="phone-icon"><i class="eci call"></i></div>
-          <div class="phone-number"><p>+1 123 456 789</p></div>
+  <div class="eco-header">
+    <div class="üst-navigation-bar">
+      <div class="üst-bar">
+        <div class="başlık">ecolarium</div>
+        <div class="contact">
+          <div class="phone">
+            <div class="phone-icon"><i class="eci call"></i></div>
+            <div class="phone-number"><p>+1 123 456 789</p></div>
+          </div>
+          <div class="email">
+            <div class="email-icon"><i class="eci mail"></i></div>
+            <div class="email-"><p>ecolarium@mail.com</p></div>
+          </div>
+          <div class="konum">
+            <div class="konum-icon"><i class="eci location"></i></div>
+            <div><p>Ankara 06000, Turkey</p></div>
+          </div>
+
+          <div class="line"></div>
         </div>
-        <div class="email">
-          <div class="email-icon"><i class="eci mail"></i></div>
-          <div class="email-"><p>ecolarium@mail.com</p></div>
+
+        <div class="sosyal-medya">
+          <div class="sosyal-medya-icons">
+            <i class="eci linkedin-outline"></i>
+            <i class="eci instagram-outline"></i>
+            <i class="eci facebook-outline"></i>
+          </div>
+          <div class="line2"></div>
         </div>
-        <div class="konum">
-          <div class="konum-icon"><i class="eci location"></i></div>
-          <div><p>Ankara 06000, Turkey</p></div>
+
+        <div class="language">
+          <p>EN</p>
+          <i class="eci chevron-down"></i>
         </div>
 
-        <div class="line"></div>
-      </div>
+        <div class="toggle-switch">
+          <input id="toggle_switch" name="toggle_switch" type="checkbox" />
 
-      <div class="sosyal-medya">
-        <div class="sosyal-medya-icons">
-          <i class="eci linkedin-outline"></i>
-          <i class="eci instagram-outline"></i>
-          <i class="eci facebook-outline"></i>
+          <label for="toggle_switch"> </label>
         </div>
-        <div class="line2"></div>
-      </div>
-
-      <div class="language">
-        <p>EN</p>
-        <i class="eci chevron-down"></i>
-      </div>
-
-      <div class="toggle-switch">
-        <input id="toggle_switch" name="toggle_switch" type="checkbox" />
-
-        <label for="toggle_switch"> </label>
       </div>
     </div>
-  </div>
-  <div class="alt-navigation-bar">
-    <div class="dropdown-menu">
-    <div class="dropdown-home">Home
-  
-  </div>
-  <div class="dropdown-Company">
-    <div class="company">
-      <p>Company</p>
-      <i class="eci chevron-down"></i>
-    </div>
-    
-     <div class="dropdown-company-conteiner">
-   <EcolariumHeaderCompanyDropdown  :data2="companyourarray" :data3="companyforarray"/>
-   </div>
-  </div>
-  <div class="dropdown-Sector">
-    <div class="sector">
-      <p>Sector</p>
-      <i class="eci chevron-down"></i>
-    </div>
-    <div class="dropdown-sector-conteiner">
-<EcolariumHeaderSectorDropdown/>
-    </div>
-   
-    
-    
-  </div>
-  <div class="dropdown-investor">
-    <div class="invester">
-      <p>Investor</p>
-    <i class="eci chevron-down"></i>
-    </div>
-    <div class="dropdown-investor-conteiner">
-    
-    <EcolariumHeaderInvestorDropdown />
-    </div>
-  </div> 
-  <div class="dropdown-Document">Document
-  
-  </div>
-  <div class="dropdown-News">News
-   
-  </div>
-  <div class="dropdown-Contact-us">Contact us
-  </div>
-    
+    <div class="alt-navigation-bar">
+      <div class="dropdown-menu">
+        <div class="dropdown-home">Home</div>
+        <div class="dropdown-Company">
+          <div class="company">
+            <p>Company</p>
+            <i class="eci chevron-down"></i>
+          </div>
 
-      
+          <div class="dropdown-company-conteiner">
+            <EcolariumHeaderCompanyDropdown
+              :data2="companyourarray"
+              :data3="companyforarray"
+            />
+          </div>
+        </div>
+        <div class="dropdown-Sector">
+          <div class="sector">
+            <p>Sector</p>
+            <i class="eci chevron-down"></i>
+          </div>
+          <div class="dropdown-sector-conteiner">
+            <EcolariumHeaderSectorDropdown />
+          </div>
+        </div>
+        <div class="dropdown-investor">
+          <div class="invester">
+            <p>Investor</p>
+            <i class="eci chevron-down"></i>
+          </div>
+          <div class="dropdown-investor-conteiner">
+            <EcolariumHeaderInvestorDropdown />
+          </div>
+        </div>
+        <div class="dropdown-Document">Document</div>
+        <div class="dropdown-News">News</div>
+        <div class="dropdown-Contact-us">Contact us</div>
+      </div>
     </div>
-    
-</div>
-    <div >
+    <div>
       <button class="connect_button">Connect ecolarium Finance</button>
     </div>
   </div>
-
-
 </template>
 
 <script setup>
 import EcolariumHeaderInvestorDropdown from "./ecolarium-header-investor-dropdown.vue";
 import EcolariumHeaderCompanyDropdown from "./ecolarium-header-company-dropdown.vue";
 import EcolariumHeaderSectorDropdown from "./ecolarium-header-sector-dropdown.vue";
-const companyourarray= [
-{
-  "title" : "deneme1",
-  "subtitle" : "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
-  "icon" : "eci home-check"
-},
-{
-  "title" : "deneme2",
-  "subtitle" : "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
-  "icon" : "eci home-check"
-},
-{
-  "title" : "deneme3",
-  "subtitle" : "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
-  "icon" : "eci home-check"
-},
-{
-  "title" : "deneme3",
-  "subtitle" : "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
-  "icon" : "eci home-check"
-},
-{
-  "title" : "deneme3",
-  "subtitle" : "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
-  "icon" : "eci home-check"
-},
-{
-  "title" : "deneme3",
-  "subtitle" : "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
-  "icon" : "eci home-check"
-}]
-const companyforarray =[
+const companyourarray = [
   {
-  "title" : "deneme2",
-  "subtitle" : "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
-  "icon" : "eci home-check"
-  }
-]
+    title: "deneme1",
+    subtitle:
+      "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
+    icon: "eci home-check",
+  },
+  {
+    title: "deneme2",
+    subtitle:
+      "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
+    icon: "eci home-check",
+  },
+  {
+    title: "deneme3",
+    subtitle:
+      "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
+    icon: "eci home-check",
+  },
+  {
+    title: "deneme3",
+    subtitle:
+      "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
+    icon: "eci home-check",
+  },
+  {
+    title: "deneme3",
+    subtitle:
+      "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
+    icon: "eci home-check",
+  },
+  {
+    title: "deneme3",
+    subtitle:
+      "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
+    icon: "eci home-check",
+  },
+];
+const companyforarray = [
+  {
+    title: "deneme2",
+    subtitle:
+      "loren sadsad askdmkasm loren sadsad askdmkasm  loren sadsad askdmkasm  loren sadsad askdmkasm ",
+    icon: "eci home-check",
+  },
+];
 </script>
 
 <style>
-
-.eco-header{
- position: absolute;
+.eco-header {
+  position: absolute;
   top: 0;
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);;
-  
-  
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .üst-navigation-bar {
-
-
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  
-  border-bottom: 1px solid rgb(255,255,255,0.16);
+
+  border-bottom: 1px solid rgb(255, 255, 255, 0.16);
 }
 
 .başlık {
@@ -263,7 +252,6 @@ const companyforarray =[
 .sosyal-medya-icons .eci {
   font-size: 18px;
   padding: 5px;
-
 }
 
 .line2 {
@@ -292,7 +280,7 @@ const companyforarray =[
   width: 56px;
   height: 32px;
   right: 40px;
-} 
+}
 
 input[type="checkbox"] {
   width: 0;
@@ -328,124 +316,113 @@ input:checked + label::after {
   transform: translateX(-100%);
 }
 
-.alt-navigation-bar{
-  display:flex;
+.alt-navigation-bar {
+  display: flex;
   justify-content: space-between;
-height: 72px;
-width: 100%;
-left: 0px;
-top: 56px;
-border-radius: 0px;
-
+  height: 72px;
+  width: 100%;
+  left: 0px;
+  top: 56px;
+  border-radius: 0px;
 }
- .dropdown-menu {
+.dropdown-menu {
   position: relative;
   height: auto;
   top: 21px;
   left: 50px;
   font-size: 16px;
-font-weight: 400;
-line-height: 20px;
-letter-spacing: 0em;
-text-align: left;
-display: flex;
-color: #f9f9f9;
- gap: 25px;
-  
-}
-.dropdown-home{
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
   display: flex;
-
-  }
- .dropdown-Company{
+  color: #f9f9f9;
+  gap: 25px;
+}
+.dropdown-home {
+  display: flex;
+}
+.dropdown-Company {
   display: flex;
   color: white;
-font-size: 16px;
-font-weight: 400;
-line-height: 20px;
-text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
 }
-.dropdown-Sector{
+.dropdown-Sector {
   display: flex;
   color: white;
-font-size: 16px;
-font-weight: 400;
-line-height: 20px;
-text-align: left;
-}
-  
- .dropdown-investor{
-display: flex;
-color: white;
-font-size: 16px;
-font-weight: 400;
-line-height: 20px;
-text-align: left;
-
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
 }
 
+.dropdown-investor {
+  display: flex;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
 
-  .dropdown-documents{
-    display: flex;
-  
-  }
-  .dropdown-news{
-    display: flex;
-
-  }
-  .dropdown-contact-us{
-    display: flex;
-  
-  }
- .connect_button{
+.dropdown-documents {
+  display: flex;
+}
+.dropdown-news {
+  display: flex;
+}
+.dropdown-contact-us {
+  display: flex;
+}
+.connect_button {
   background: rgba(255, 255, 255, 0.08);
   box-sizing: border-box;
   border: 1px solid #ffffff;
   border-radius: 6px;
   color: #ffffff;
   display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 10px 16px;
-gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
 
-position: absolute;
-width: 200px;
-height: 40px;
-left: 1290px;
-right: 40px;
-top: 72px;
-padding-top: 16px;
-padding-bottom: 16px;
-font-family: 'Mukta';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 20px;
-/* identical to box height, or 143% */
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  left: 1290px;
+  right: 40px;
+  top: 72px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-family: "Mukta";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
 
-text-align: center;
-
- }
-
-.company{
-  border-bottom: 1px solid white;
-  display: flex;
-  height: 20px;
-
+  text-align: center;
 }
-.sector{
-   border-bottom: 1px solid white;
-  display: flex;
-  height: 20px;
-}
-.invester  {
+
+.company {
   border-bottom: 1px solid white;
   display: flex;
   height: 20px;
 }
-
+.sector {
+  border-bottom: 1px solid white;
+  display: flex;
+  height: 20px;
+}
+.invester {
+  border-bottom: 1px solid white;
+  display: flex;
+  height: 20px;
+}
 
 .dropdown-investor:hover .dropdown-content-investor {
   display: block;
